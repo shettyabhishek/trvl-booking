@@ -5,10 +5,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card *ngFor="let place of allPlaces;" color="warning">
+  <ion-card *ngFor="let place of allPlaces;" color="light">
     <ion-img [src]="place.imgUrl"></ion-img>
     <ion-card-header>
-      <ion-card-title text-center>{{place.name}}</ion-card-title>
+      <ion-card-title text-center color="medium">
+        {{place.name}}
+      </ion-card-title>
+      <ion-icon name="book" class="show-more" size="large" color="primary" [routerLink]="[place.id]"></ion-icon>
     </ion-card-header>
   </ion-card>
 </ion-content>
