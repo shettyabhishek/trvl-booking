@@ -1,0 +1,7 @@
+{
+  "name": "trvl-booking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

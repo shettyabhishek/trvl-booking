@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>Discover Places</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let place of allPlaces;" color="warning">
+    <ion-img [src]="place.imgUrl"></ion-img>
+    <ion-card-header>
+      <ion-card-title text-center>{{place.name}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
