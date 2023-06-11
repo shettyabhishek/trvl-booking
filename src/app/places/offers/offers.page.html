@@ -1,13 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>offers</ion-title>
+  <ion-toolbar color="success">
+    <ion-title>Offers</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="add" size="large" class="ion-padding" [routerLink]="['/places/offers/new']"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">offers</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!--ion-card *ngFor="let offer of allOffers;" color="light">
+    <ion-img [src]="offer.imgUrl"></ion-img>
+    <ion-card-header>
+      <ion-card-title text-center color="medium">
+        {{offer.name}}
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card-->
+  <ion-list class="offers-listing">
+    <ion-item *ngFor="let offer of allOffers;let i = index;" color="light" >
+      <!--ion-thumbnail [slot]="i % 2 === 0 ? 'start' : 'end'"-->
+      <ion-thumbnail slot="start">
+        <ion-img [src]="offer.imgUrl"></ion-img>
+      </ion-thumbnail>
+      <ion-text color="medium">
+        <h3>{{offer.name}}</h3>
+        <h5 class="thumbnail-price-header">${{offer.price}}</h5>
+      </ion-text>
+    </ion-item>
+  </ion-list>
 </ion-content>
