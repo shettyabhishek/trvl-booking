@@ -100,4 +100,12 @@ export class PlacesService {
   getOffers():Place[]{
     return [...this._allOffers];
   }
+
+  //function to get the offer details using the id
+  getOfferDetails(placeId: string | null | undefined): Place | undefined{
+    if (!placeId || null) return undefined;
+    return this._allOffers.find((item)=>{
+      return item.id === placeId;
+    })
+  }
 }

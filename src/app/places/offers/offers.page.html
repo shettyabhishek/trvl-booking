@@ -17,7 +17,7 @@
     </ion-card-header>
   </ion-card-->
   <ion-list class="offers-listing">
-    <ion-item *ngFor="let offer of allOffers;let i = index;" color="light" >
+    <ion-item *ngFor="let offer of allOffers;let i = index;" color="light" [routerLink]="[offer.id]">
       <!--ion-thumbnail [slot]="i % 2 === 0 ? 'start' : 'end'"-->
       <ion-thumbnail slot="start">
         <ion-img [src]="offer.imgUrl"></ion-img>
