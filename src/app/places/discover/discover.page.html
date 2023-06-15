@@ -1,10 +1,46 @@
+
+<ion-menu type="overlay" contentId="dscvr-menu">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>MyBookie</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-no-padding">
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item lines="none" [routerLink]="['/','places','offers']">
+          <ion-menu-toggle>
+            <ion-icon name="reader-outline" size="large"></ion-icon>
+            <ion-text class="menu-item-text">Offers</ion-text>
+          </ion-menu-toggle>
+        </ion-item>
+        <ion-item [routerLink]="['/','bookings']">
+          <ion-menu-toggle>
+            <ion-icon name="receipt-outline" size="large"></ion-icon>
+            <ion-text class="menu-item-text">My Bookings</ion-text>
+          </ion-menu-toggle>
+        </ion-item>
+        <ion-item (click)="logOut()">
+          <ion-menu-toggle>
+            <ion-icon name="log-out-outline" size="large"></ion-icon>
+            <ion-text class="menu-item-text" color="warning">Logout</ion-text>
+          </ion-menu-toggle>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-header [translucent]="true">
   <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Discover Places</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" id="dscvr-menu">
   <ion-card *ngFor="let place of allPlaces;" color="light">
     <ion-img [src]="place.imgUrl"></ion-img>
     <ion-card-header>
