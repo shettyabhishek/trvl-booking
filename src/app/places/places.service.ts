@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+
+//importing the dependent models
 import { Place } from './places.model';
+import { Offers } from './offers.model';
 
 @Injectable({
   providedIn: 'root'
@@ -38,48 +41,48 @@ export class PlacesService {
     )
   ];
 
-  private _allOffers: Place[] = [new Place(
+  private _allOffers: Offers[] = [new Offers(
     "1MSvLRxVhBruH7dmwRVodvMQAWHFnDW2uH",
     "Sporer-Rempel",
     "Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
     669.87,
     "https://media-cdn.tripadvisor.com/media/photo-s/13/d0/74/b4/outside-view.jpg",
-    "Jibiya"
-  ),new Place(
+    "Jibiya",new Date("12/07/2023"),new Date("06/15/2023")
+  ),new Offers(
     "1G3LzHMja5KDy4YUeKGrcyFJT8Nh9YmtAR",
     "Kunde-Ortiz",
     "Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     694.83,
     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/256437345.jpg?k=64be2b45a62562d02c6c49a34d9433b897299fbd3600266d343d6d800ff80a86&o=&hp=1",
-    "Cambuga"
-  ),new Place(
+    "Cambuga",new Date("10/29/2023"),new Date("06/15/2023")
+  ),new Offers(
     "1GJS2vNmB2m5qFZzHULkYdT5XETqEvVYRn",
     "Morar Inc",
     "Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     305.89,
     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/107182968.jpg?k=3fbe81a63634228d4de469714a2b83375a07c465c76619bdc07d3b311fe83454&o=&hp=1",
-    "T’et’ri Tsqaro"
-  ),new Place(
+    "T’et’ri Tsqaro",new Date("02/22/2024"),new Date("06/15/2023")
+  ),new Offers(
     "1A2X4ToXmzFPtu7NjzUsn6t4ozqf81yfWX",
     "Morar Inc",
     "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
     276.67,
     "https://dynamic-media-cdn.tripadvisor.com/media/daodao/photo-s/02/40/3c/17/getlstd-property-photo.jpg?w=600&h=-1&s=1",
-    "Zhouzhuang"
-  ),new Place(
+    "Zhouzhuang",new Date("08/09/2023"),new Date("06/15/2023")
+  ),new Offers(
     "1NNStFfamPUiLoJRDb7a351Xv6PnFgY1c3",
     "Smith and Sons",
     "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
     997.77,
     "https://pix6.agoda.net/hotelImages/190/19098061/19098061_20111313000093244764.jpg",
-    "Yuyue"
-  ),new Place(
+    "Yuyue",new Date("09/09/2023"),new Date("06/15/2023")
+  ),new Offers(
     "1MJKbNY6a8TFS3pkd4uVftRQu5anyw4wgW",
     "Abbott-Lynch",
     "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
     775.69,
     "https://media-cdn.tripadvisor.com/media/photo-s/07/3a/84/fe/bali-world-hotel.jpg",
-    "Leuwibuleud"
+    "Leuwibuleud",new Date("12/21/2023"),new Date("06/15/2023")
   )]
   constructor() { }
 
@@ -97,12 +100,12 @@ export class PlacesService {
   }
 
   //function to get all offers
-  getOffers():Place[]{
+  getOffers():Offers[]{
     return [...this._allOffers];
   }
 
   //function to get the offer details using the id
-  getOfferDetails(placeId: string | null | undefined): Place | undefined{
+  getOfferDetails(placeId: string | null | undefined): Offers | undefined{
     if (!placeId || null) return undefined;
     return this._allOffers.find((item)=>{
       return item.id === placeId;

@@ -5,14 +5,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <ion-button color="primary" (click)="logMeIn()" expand="block" class="ion-margin">Log In</ion-button>
-  <ion-button color="primary" (click)="signIn()" expand="block" fill="clear">Sign In</ion-button>
+  <form #lgnFrm="ngForm" (submit)="loginSubmit(lgnFrm)">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required email name="email" ngModel #emailFrmCtrl="ngModel"></ion-input>
+    </ion-item>
+    <ion-item class="field-errors" lines="none" *ngIf="emailFrmCtrl.touched && !emailFrmCtrl.valid">
+      <ion-label>Please provide valid email id</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required name="pwd" ngModel #pwdFrmCtrl="ngModel"></ion-input>
+    </ion-item>
+    <ion-item class="field-errors" lines="none" *ngIf="pwdFrmCtrl.touched && !pwdFrmCtrl.valid">
+      <ion-label>Please provide valid password</ion-label>
+    </ion-item>
+    <ion-button color="primary" expand="block" class="ion-margin" type="submit" [disabled]="lgnFrm.invalid">Log In</ion-button>
+    <ion-button color="primary" [disabled]="lgnFrm.invalid" (click)="signUp(emailFrmCtrl,pwdFrmCtrl)" expand="block" fill="clear" type="button">Sign In</ion-button>
+  </form>
 </ion-content>

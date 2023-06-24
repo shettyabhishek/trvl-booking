@@ -24,7 +24,10 @@
       </ion-thumbnail>
       <ion-text color="medium">
         <h3>{{offer.name}}</h3>
-        <h5 class="thumbnail-price-header">${{offer.price}}</h5>
+        <div>
+          <span class="dateLabel">From: </span><span class="dateStr">{{offer?.startDate | dateFormatter:"DD/MM/YYYY"}}</span>
+          <span class="dateLabel">To: </span><span class="dateStr">{{offer?.endDate | dateFormatter:"DD/MM/YYYY"}}</span>
+        </div>
       </ion-text>
     </ion-item>
   </ion-list>

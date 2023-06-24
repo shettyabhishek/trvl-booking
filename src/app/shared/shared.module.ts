@@ -4,12 +4,13 @@ import { IonicModule } from '@ionic/angular';
 
 //adding the component
 import { CreateBookingComponent } from './create-booking/create-booking.component';
+import { DateFormatterPipe } from './date-formatter.pipe';
 
 @NgModule({
-  declarations: [CreateBookingComponent],
+  declarations: [CreateBookingComponent, DateFormatterPipe],
   imports: [
     CommonModule,IonicModule
   ],
-  exports: [CreateBookingComponent]
+  exports: [CreateBookingComponent,DateFormatterPipe]
 })
 export class SharedModule { }

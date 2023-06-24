@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 //importing the service
 import { PlacesService } from '../places.service';
-import { Place } from '../places.model';
+import { Offers } from '../offers.model';
 
 @Component({
   selector: 'app-offers',
@@ -11,7 +11,7 @@ import { Place } from '../places.model';
 })
 
 export class OffersPage implements OnInit {
-  public allOffers: Place[] | undefined;
+  public allOffers: Offers[] | undefined;
 
   constructor(private _placesServ: PlacesService) { }
 
